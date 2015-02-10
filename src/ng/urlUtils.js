@@ -65,7 +65,7 @@ var originUrl = urlResolve(window.location.href, true);
 function urlResolve(url, base) {
   var href = url;
 
-  if (msie) {
+  if (msie <= 11) {
     // Normalize before parse.  Refer Implementation Notes on why this is
     // done in two steps on IE.
     urlParsingNode.setAttribute("href", href);
